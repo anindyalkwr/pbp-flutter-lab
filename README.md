@@ -26,8 +26,13 @@ Scaffold: Implementasi struktur tata letak material desain visual dasar dan meny
 Text: Menampilkan pesan beserta gayanya <br>
 
 (3) Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut. <br>
+Memanggil fungsi setState() akan memberi tanda kepada framework bahwa state internal di dalam objek ini telah berubah yang mungkin akan mempengaruhi user interface sehingga menyebabkan framework untuk menjadwalkan sebuah build untuk state object ini. Apabila fungsi ini tidak dipanggil maka framewrok bisa saja tidak menjadwalkan build ini dan user interface tidak akan berubah. <br>
+Pada tugas yang saya kerjakan, variabel yang terdampak dari fungsi setState() ini adalah variabel counter dan juga textInfo dimana, perlu build ulang tiap kali dilakukan increment atau decrement counter sehingga menampilkan tampilan yang diinginkan. <br>
 
 (4) Jelaskan perbedaan antara const dengan final. <br>
+Walaupun kedua variabel const dan final memiliki kesamaan yaitu tidak dapat diubah setelah inisialisasi, perbedaan keduanya antara lain: <br>
+**const**: digunakan untuk menginisialisasi variabel yang diketahui nilai awalnya <br>
+**final**: digunakan untuk menginisialisasi variabel yang tidak diketahui nilai awalnya <br>
 
 (5) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 Pertama - tama saya menambahkan fungsi baru yang berkebalikan dengan fungsi incrementCounter, yaitu decrementCounter yang di dalamnya memiliki conditions ketika counter bernilai 0, maka tidak akan melakukan decrement kepada variabel counter. Selain itu saya juga menambahkan dua buah fungsi yang selalu dipanggil pada fungsi increment/decrement sebuah counter, yaitu setTextInfo dan setVisibility yang akan merubah variabel visibility dan textInfo yang bergantung pada variabel counter. Setelah semua fungsi berhasil dibuat, maka meletakkan FloatingActionButton baru dengan Icon remove dengan menyesuakannya sesuai yang diminta oleh soal. <br>
