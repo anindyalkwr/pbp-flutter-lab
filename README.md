@@ -4,9 +4,9 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Penjelasan dan demonstrasi program
 (1) Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya. <br>
-_Stateless_ _widget_: _stateless_ widget_ adalah _widget_ yang penampilan dan propertinya tidak berubah atau dalam kata lain _immutable_ selama jalannya sebuah aplikasi. <br>
-Stateful widget: _stateful_ _widget_ adalah _widget_ yang dapat merubah propertinya saat dijalankan dalam suatu aplikasi dan bersifat dinamis. _Widget_ ini _mutable_ dan dapat diubah berkali - kali mengembalikan respon dari _events_ _action_ yang dilakukan oleh pengguna atau ketika menerima data. <br>
-Perbedaan Stateless vs Stateful
+*_Stateless_ _widget_*: _stateless_ widget_ adalah _widget_ yang penampilan dan propertinya tidak berubah atau dalam kata lain _immutable_ selama jalannya sebuah aplikasi. <br>
+*Stateful _widget_*: _stateful_ _widget_ adalah _widget_ yang dapat merubah propertinya saat dijalankan dalam suatu aplikasi dan bersifat dinamis. _Widget_ ini _mutable_ dan dapat diubah berkali - kali mengembalikan respon dari _events_ _action_ yang dilakukan oleh pengguna atau ketika menerima data. <br>
+
 |  _Stateless_  |   _Stateful_  |
 | ------------- | ------------- |
 | Statis  | Dinamis  |
