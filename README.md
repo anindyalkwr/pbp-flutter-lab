@@ -39,3 +39,14 @@ Pertama - tama saya menambahkan fungsi baru yang berkebalikan dengan fungsi incr
 
 #### Referensi: <br>
 1. [Welcome to the Flutter API reference documentation!](https://api.flutter.dev/index.html)
+
+# (README) Tugas 8: Flutter Form
+
+Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+
+## Penjelasan dan demonstrasi program
+(1) Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement. <br>
+(2) Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
+(3) Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed). <br>
+(4) Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter. <br>
+(5) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
