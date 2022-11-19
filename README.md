@@ -73,3 +73,12 @@ Pertama, saya menambahkan file baru ```form.dart``` dan ```data.dart``` dan meng
 # (README) Tugas 9: Integrasi Web Service pada Flutter
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+
+## Penjelasan dan demonstrasi program
+(1) Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON? <br>
+
+(2) Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
+
+(3) Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter. <br> 
+
+(4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
