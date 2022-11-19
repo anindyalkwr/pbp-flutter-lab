@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/data.dart';
+import 'package:counter_7/page/data.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
 
 List<Data> daftarData = [];
 
@@ -56,6 +57,16 @@ class _MyFormPageState extends State<MyFormPage> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => const MyDataPage()),
+                        );
+                      },
+                    ),
+                    ListTile(
+                      title: const Text('Watchlist'),
+                      onTap: () {
+                        // Route menu ke halaman form
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => const MyWatchlistPage()),
                         );
                       },
                     ),
@@ -191,9 +202,7 @@ class _MyFormPageState extends State<MyFormPage> {
                                         shrinkWrap: true,
                                         children: <Widget>[
                                           Center(child: const Text('Jenis Kegiatan Belum Dipilih' + '\n',
-                                            style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20))),
+                                             )),
                                           // TODO: Munculkan informasi yang didapat dari form
                                           TextButton(
                                             onPressed: () {
