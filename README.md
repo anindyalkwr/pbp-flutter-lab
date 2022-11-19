@@ -39,3 +39,33 @@ Pertama - tama saya menambahkan fungsi baru yang berkebalikan dengan fungsi incr
 
 #### Referensi: <br>
 1. [Welcome to the Flutter API reference documentation!](https://api.flutter.dev/index.html)
+
+# (README) Tugas 8: Flutter Form
+
+Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+
+## Penjelasan dan demonstrasi program
+(1) Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement. <br>
+Navigator.push: Routing akan di push ke dalam stack tanpa menghapus routing sebelumnya <br>
+Navigator.pushReplacement: Routing akan di push ke dalam stack dengan menggantikan routing sebelumnya (dihapus setelah routing baru selesai di load) <br>
+
+(2) Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
+Pada proyek kali ini, saya menambahkan beberapa widget baru antara lain: <br>
+ListTile: Digunakan untuk menampilkan pilihan pada drawer <br>
+ListView: Digunakan untuk menampilkan data yang telah diinput oleh pengguna <br>
+TextFormField: Digunakan untuk menerima input dari pengguna <br>
+DropdownButton: Digunakan untuk menerima input dari pilihan dropdown pengguna <br>
+TextButton: Digunakan sebagai ActionListener untuk menjalankan (menyimpan data) <br>
+
+(3) Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed). <br>
+onPressed: Event akan dieksekusi setelah menerima input berupa tekan (biasanya pada button) <br>
+onHover: Event akan dieksekusi setelah menerima input selama pointer mouse berada di widget <br>
+onFocusChange: Event akan dieksekusi setelah menerima input selama pengguna sedang berinteraksi pada widget <br>
+onChanged: Event akan dieksekusi setelah menerima input selama pengguna sednag melakukan perubahan terhadap value yang dimiliki oleh widget <br>
+onSaved: Event akan dieksekusi ketika nilai dari form disimpan melalui FormState.save <br>
+
+(4) Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter. <br>
+Navigator mengganti halaman dari aplikasi Flutter dengan memanfaatkan konsep Stack, yang dimana flutter biasanya akan melakukan push untuk menuju halaman yang ingin dijalankan diatas stack dan dapat memanfaatkan pop untuk kembali ke halaman yang sebelumnya diakses atau dengan push kembali halaman tersebut. Flutter memanfaatkan MaterialPageRoute dalam menjalankan proses perpindahan halaman. <br>
+
+(5) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
+Pertama, saya menambahkan file baru ```form.dart``` dan ```data.dart``` dan mengimplementasikan appbar sederhana di tiap file tersebut. Setelah itu saya menambahkan masing - masing drawer sebagai navigator untuk berpindah halaman dengan memanfaatkan widget ListTile. Selanjutnya saya menambahkan berbagai macam widget input pada ```form.dart``` yang disesuaikan dengan kebutuhan Tugas 8. Kemudian saya membuat class baru bernama Data yang memiliki attribut judul, nominal, dan juga jenis yang akan disimpan nantinya pada list di file form.dart menggunakan widget TextButton. Terakhir, dengan melakukan import saya bisa mengakses list di file form.dart untuk digunakan pada file data.dart yang kemudian ditampilkan menggunakan widget ListView. Terakhir saya menyesuaikan tampilan yang telah saya buat dengan mengikuti ketentuan dari Tugas 8 ini. <br>
