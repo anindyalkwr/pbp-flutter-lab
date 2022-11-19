@@ -69,3 +69,7 @@ Navigator mengganti halaman dari aplikasi Flutter dengan memanfaatkan konsep Sta
 
 (5) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 Pertama, saya menambahkan file baru ```form.dart``` dan ```data.dart``` dan mengimplementasikan appbar sederhana di tiap file tersebut. Setelah itu saya menambahkan masing - masing drawer sebagai navigator untuk berpindah halaman dengan memanfaatkan widget ListTile. Selanjutnya saya menambahkan berbagai macam widget input pada ```form.dart``` yang disesuaikan dengan kebutuhan Tugas 8. Kemudian saya membuat class baru bernama Data yang memiliki attribut judul, nominal, dan juga jenis yang akan disimpan nantinya pada list di file form.dart menggunakan widget TextButton. Terakhir, dengan melakukan import saya bisa mengakses list di file form.dart untuk digunakan pada file data.dart yang kemudian ditampilkan menggunakan widget ListView. Terakhir saya menyesuaikan tampilan yang telah saya buat dengan mengikuti ketentuan dari Tugas 8 ini. <br>
+
+# (README) Tugas 9: Integrasi Web Service pada Flutter
+
+Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
