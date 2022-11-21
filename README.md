@@ -76,17 +76,18 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Penjelasan dan demonstrasi program
 (1) Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON? <br>
+Seharusnya bisa, yaitu dengan mengkonversikan data json langsung setelah di decode dari url. Dari literatur yang saya lakukan, sedikit bahkan jarang ada yang menggunakan cara tersebut bahkan dari dokumentasi flutter pun membuat folder model terlebih dahulu. Sehingga menurut saya hal tersebut tidaklah lebih baik dibandingkan membuat model terlebih dahulu karena lebih sulit di baca dan tidak efisien. <br>
 
 (2) Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
-```FutureBuilder```: Memudahkan mengelola asynchronous data sources
-```ListTile```: Untuk menampilkan data dalam alignment dan position yang diinginkan, serta menjalankan perintah onTap()
-```ListView```: Untuk menampilkan data dalam alignment dan position yang diinginkan
+```FutureBuilder```: Memudahkan mengelola asynchronous data sources <br>
+```ListTile```: Untuk menampilkan data dalam alignment dan position yang diinginkan, serta menjalankan perintah onTap() <br>
+```ListView```: Untuk menampilkan data dalam alignment dan position yang diinginkan <br>
 
 (3) Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter. <br> 
 a. Menambahkan http package dengan command ```flutter pub add http``` dan memberikan akses internet ke dalam proyek yang sedang dibuat dengan menambahkan beberapa line kode pada file ```android/app/src/main/AndroidManifest.xml``` <br>
-b. Buat folder model dan buat dart file untuk model dari data json yang ingin diambil dan ditampilkan. Saya memanfaatkan website quicktype dalam menulis kode model MyWatchlist yang menyesuaikan dengan kode json yang diberikan <br>
-c. Pada folder page, tambahkan halaman yang akan menampilkan data json dan buatlah fungsi Future yang akan mengambil data dari url HTTP yang diberikan dengan decode url menjadi bentuk json dan dikonversikan ke dalam object WatchList. <br>
-d. Tampilkan data dengan widget yang diinginkan, saya sendiri memanfaatkan ListView dan ListTile untuk menampilkan data <br>
+b. Buat folder ```model``` dan buat dart file untuk model dari data json yang ingin diambil dan ditampilkan. Saya memanfaatkan website quicktype dalam menulis kode model MyWatchlist yang menyesuaikan dengan kode json yang diberikan <br>
+c. Pada folder ```page```, tambahkan halaman yang akan menampilkan data json dan buatlah fungsi Future yang akan mengambil data dari url HTTP yang diberikan dengan decode url menjadi bentuk json dan dikonversikan ke dalam object WatchList. <br>
+d. Tampilkan data dengan widget yang diinginkan, saya sendiri memanfaatkan ```ListView``` dan ```ListTile``` untuk menampilkan data <br>
 
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 a. Menambahkan ListTile baru yang navigate ke halaman mywatchlist pada drawer. <br>
