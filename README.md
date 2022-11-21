@@ -78,7 +78,20 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 (1) Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON? <br>
 
 (2) Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
+```FutureBuilder```: Memudahkan mengelola asynchronous data sources
+```ListTile```: Untuk menampilkan data dalam alignment dan position yang diinginkan, serta menjalankan perintah onTap()
+```ListView```: Untuk menampilkan data dalam alignment dan position yang diinginkan
 
 (3) Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter. <br> 
+a. Menambahkan http package dengan command ```flutter pub add http``` dan memberikan akses internet ke dalam proyek yang sedang dibuat dengan menambahkan beberapa line kode pada file ```android/app/src/main/AndroidManifest.xml``` <br>
+b. Buat folder model dan buat dart file untuk model dari data json yang ingin diambil dan ditampilkan. Saya memanfaatkan website quicktype dalam menulis kode model MyWatchlist yang menyesuaikan dengan kode json yang diberikan <br>
+c. Pada folder page, tambahkan halaman yang akan menampilkan data json dan buatlah fungsi Future yang akan mengambil data dari url HTTP yang diberikan dengan decode url menjadi bentuk json dan dikonversikan ke dalam object WatchList. <br>
+d. Tampilkan data dengan widget yang diinginkan, saya sendiri memanfaatkan ListView dan ListTile untuk menampilkan data <br>
 
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
+a. Menambahkan ListTile baru yang navigate ke halaman mywatchlist pada drawer. <br>
+b. Menambahkan folder ```model```, dan file ```mywatchlist.dart``` yang berisikan kode yang disalin dari website Quicktype berdasarkan data json yang diberikan. <br>
+c. Menambahkan file ```mywatchlist_page.dart``` di folder dart yang mengambil dan menampilkan data json menggunakan fungsi Future berdasarkan url Tugas Django sebelumnya. <br>
+d. Menampilkan data json dalam ListTile sehingga dapat menambahkan fungsi ```onTap()``` yang akan menavigasi setiap judul watch list ke halaman detail ketika ada request tap dengan membawa detail data tiap watchList <br>
+e. Menambahkan file ```watchlistitem.dart``` yang akan menampilkan detail data berdasarkan judul yang ditap. <br>
+f. Menambahkan tombol back yang akan navigate.pop (kembali ke halaman sebelumnya) yang ditempelkan pada bottom navigation bar agar positionnya fixed. <br>
