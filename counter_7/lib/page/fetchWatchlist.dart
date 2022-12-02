@@ -7,25 +7,26 @@ import 'package:counter_7/page/form.dart';
 import 'package:counter_7/page/data.dart';
 
 Future<List<MyWatchlist>> fetchWatchlist() async {
-        var url = Uri.parse('https://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/json/');
-        var response = await http.get(
-        url,
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/json",
-        },
-        );
+  var url = Uri.parse(
+      'https://lokeswara-pbp-tugas2.up.railway.app/mywatchlist/json/');
+  var response = await http.get(
+    url,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+  );
 
-        // melakukan decode response menjadi bentuk json
-        var data = jsonDecode(utf8.decode(response.bodyBytes));
+  // melakukan decode response menjadi bentuk json
+  var data = jsonDecode(utf8.decode(response.bodyBytes));
 
-        // melakukan konversi data json menjadi object ToDo
-        List<MyWatchlist> listWatchlist = [];
-        for (var d in data) {
-        if (d != null) {
-            listWatchlist.add(MyWatchlist.fromJson(d));
-        }
-        }
-
-        return listWatchlist;
+  // melakukan konversi data json menjadi object ToDo
+  List<MyWatchlist> listWatchlist = [];
+  for (var d in data) {
+    if (d != null) {
+      listWatchlist.add(MyWatchlist.fromJson(d));
     }
+  }
+
+  return listWatchlist;
+}
